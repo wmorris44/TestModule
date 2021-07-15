@@ -7,4 +7,12 @@
 
 import Foundation
 
-class TestClass {}
+class TestClass: Module {
+    required init<Environment>(environment: Environment) throws {}
+    
+    let b = true
+}
+
+public protocol Module {
+    init<Environment>(environment: Environment) throws
+}
