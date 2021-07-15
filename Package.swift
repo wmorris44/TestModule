@@ -24,8 +24,8 @@ let package = Package(
         .target(
             name: "TestModule",
             dependencies: [],
-            path: "./Sources",
-            resources: [.process("./Sources")],
+            path: "Sources",
+            resources: [.process("Sources")],
             swiftSettings: [
               .define("SPM")
             ]
