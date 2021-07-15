@@ -23,7 +23,13 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "TestModule",
-            dependencies: []),
+            dependencies: [],
+            path: "./Sources",
+            resources: [.process("./Sources")],
+            swiftSettings: [
+              .define("SPM")
+            ]
+        ),
         .testTarget(
             name: "TestModuleTests",
             dependencies: ["TestModule"]),
