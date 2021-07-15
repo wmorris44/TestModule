@@ -10,11 +10,13 @@ import Foundation
 class TestClass: Module {
     required init<Environment>(environment: Environment) throws {}
     
-    let identifier = Bundle.module.bundleIdentifier
+    var identifier = Bundle.module.bundleIdentifier
 }
 
 public protocol Module {
     init<Environment>(environment: Environment) throws
+    
+    var identifier: String? { get }
 }
 
 
