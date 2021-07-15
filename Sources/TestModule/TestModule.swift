@@ -1,3 +1,4 @@
-struct TestModule {
+class TestModule {
     var text = "Hello, World!"
 }
+
